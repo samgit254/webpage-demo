@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Big Trap Form</h1>
+    
+    <form action="index.php" method='post'>
+        <label for="userid">UserID: </label>
+        <input type="text" name = 'userid' id='userid' required="Field Can't be left empty" pattern="[a-zA-Z0-9\-]+" title="User ID can only have a dash(-), letters and/or numbers">
+        
+        <label for="pwd">Password</label>
+        <input type="password" name = 'pwd' id ='pwd' required="Field Can't be left empty" pattern="[a-zA-Z0-9@,\\\$%]{8,16}" title="Password must contain between 8 to 16 characters of letters, numbers and special characters (@,)(/\$%)">
+        <input type="radio" onclick = expose()>
+        
+            <script>
+                function expose() 
+                {
+                    var pwd = document.getElementById("pwd");
+
+                    if (pwd.type === "password") 
+                    {
+                        pwd.type = "text";
+                    } else 
+                    {
+                        pwd.type = "password";
+                    }
+                }
+            </script>
+
+        <label for="username">Username: </label>
+        <input type="text" name = 'username' id="username" required="Field Can't be left empty" pattern="@[a-zA-Z0-9_]{5,255}" value="@" title='Start your username with @ followed by at least 6 letters, numbers or an underscore(_)'>
+        
+        <label for="email">Personal Email: </label>
+        <input type="text" name='email' id="email" required="Field Can't be left empty" pattern="[a-z[\.]*0-9]+@[a-z]+\.(com){1}" title="Organisation email addresses are not allowed">
+        
+        <label for="phone">Telephone Number: </label>
+        <input type="text" name ='phone' id='phone' required="Field Can't be left empty" pattern="[0-9\+]{10,13}" title="Phone numbers can only have numbers and be in the format +2547xxxxxxxx or 07xxxxxxxx or 01xxxxxxxx">
+        
+        <input type="submit" value="Submit Form" name = "submit">
+    </form>
+
+        
+</body>
+</html>
+
+<script src="scripts/main.js"></script>

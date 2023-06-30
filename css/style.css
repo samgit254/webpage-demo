@@ -1,0 +1,20 @@
+.top
+{
+    column-count:3;
+    column-width: 320px;
+    height: 173px;
+    column-gap: 10px;
+    column-fill: balance;
+}
+
+.bottom
+{
+    column-count: 2;
+    column-width: 200px;
+}
+
+.top-col-1
+{
+    text-align: center;
+    width: 30%;
+}
