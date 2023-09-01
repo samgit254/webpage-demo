@@ -42,8 +42,5 @@ function printvalue()
 }
 
 const myHeading = document.querySelector("h1");
-myHeading.textContent = "Hello Kinyanjui"
-
-
-
+myHeading.textContent = "Hello User"; 
 
